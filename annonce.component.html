@@ -1,0 +1,53 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="get-in-touch">
+    <h1 class="title">Quoi de neuf !</h1>
+<form #f="ngForm" class="contact-form row">
+    <div class="form-field col-lg-6">
+        <input type="text" class="input-text js-input"  name="name" ngModel>
+        <label class="label" for="name">Non et Prénom</label>
+    </div>
+    <div class="form-field col-lg-6 ">
+        <input type="text" class="input-text js-input"  name="classe" ngModel>
+        <label class="label" for="classe">Classe déstiné</label>
+    </div>
+    <div class="form-field col-lg-12">
+        <input  class="input-text js-input" name="sujet" ngModel>
+        <label class="label" for="sujet">Message</label>
+    </div>
+    <div class="form-field col-lg-12">
+        <button class="submit-btn" (click)="add(f)">publier</button>
+    </div>
+</form>
+</div>
+
+<!--<div class="container">
+    <div class="anc" *ngFor="let annc of annonce">
+        <h3>{{annc.name}}</h3>
+        <p>{{annc.classe}}</p>
+        <p>{{annc.sujet}}</p>
+    </div>
+</div>-->
+
+<section class="content-item" id="comments">
+    <div class="container">   
+    	<div class="row">
+            <div class="col-sm-8">   
+            
+                <!-- COMMENT 1 - START -->
+                <div class="media" *ngFor="let annc of annonce">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
+                    <div class="media-body">
+                        <h3>Enseignant: {{annc.name}}</h3>
+                        <h4>Classe: {{annc.classe}}</h4>
+                        <p>{{annc.sujet}}</p>
+                    </div>
+                </div>
+                <!-- COMMENT 1 - END -->
+                
+    
+            </div>
+        </div>
+    </div>
+</section>
+
+
